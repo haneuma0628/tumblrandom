@@ -1,4 +1,4 @@
-# temp files from editors
+1;2c# temp files from editors
 *~
 *.bak
 .DS_Store
@@ -31,3 +31,10 @@ desktop.ini
 /fuel/app/logs/*/*/*
 /fuel/app/cache/*/*
 /fuel/app/config/crypt.php
+
+# my ignore files
+fuel/app/config/opauth.php
+fuel/app/config/db.php
+fuel/app/config/development/db.php
+fuel/app/config/auth.php
+fuel/app/config/simpleauth.php
