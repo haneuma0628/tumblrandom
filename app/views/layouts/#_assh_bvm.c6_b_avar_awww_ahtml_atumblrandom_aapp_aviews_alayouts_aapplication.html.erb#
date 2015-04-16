@@ -14,7 +14,7 @@
                 </div>
             </div>
         </header>
-        <div class="units-row">
+        <div ="units-row">
             <div class="unit-centered unit-80">
                 main contents
             </div>
@@ -25,3 +25,4 @@
         <%= yield %>
     </body>
 </html>
+]
