@@ -4,7 +4,7 @@ default: &default
   encoding  : utf8
   reconnect : fals
   username  : <%= ENV['DB_DEVELOPMENT_USERNAME'] %>
-  password  : <%= ENV['DB_DEFELOPMENT_PASSWORD']%>
+  password  : <%= ENV['DB_DEVELOPMENT_PASSWORD']%>
   host      : localhost
 
 development:
