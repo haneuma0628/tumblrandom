@@ -1,7 +1,0 @@
-class MainController < ApplicationController
-  def reload
-  end
-
-  def select
-  end
-end

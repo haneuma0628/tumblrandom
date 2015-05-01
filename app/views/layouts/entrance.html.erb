@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Tumblrandom</title>
+        <%= stylesheet_link_tag    'entrance', media: 'all', 'data-turbolinks-track' => true %>
+        <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+        <%= csrf_meta_tags %>
+    </head>
+    <body>
+        <div class="units-row">
+            <div class="unit-push-10 unit-80" id="contents-area">
+                <%= yield %>
+            </div>
+        </div>
+
+        <footer>
+            (c) 2014-2015 @hnmx4
+        </footer>
+    </body>
+</html>

@@ -16,4 +16,8 @@
 !/log/.keep
 /tmp
 
-#*
+# emacsで生成されるバックアップファイル
+\#*
+*~
+
+/public/assets

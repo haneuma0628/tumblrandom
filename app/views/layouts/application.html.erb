@@ -7,21 +7,39 @@
         <%= csrf_meta_tags %>
     </head>
     <body>
-        <header>
-            <div class="units-row">
-                <div class="unit-cenetered unit-80">
-                    tumblrandom
-                </div>
-            </div>
+        <header class="group">
+            <nav class="navbar navbar-left">
+                <ul>
+                    <li>tumblrandom </li>
+                </ul>
+            </nav>
+
+            <nav class="navbar navbar-right">
+                <ul>
+                    <li><%= fa_icon 'random' %></li>
+                    <li><%= fa_icon 'user' %></li>
+                    <li><%= fa_icon 'cog' %></li>
+                    <li><span id="icon-selected-blog"></span><i data-tools="dropdown" data-target="#list-blog"  class="fa fa-angle-down" ></i></li>
+                </ul>
+            </nav>
+            <ul id="list-blog" class="dropdown">
+                <li><a href="#">hoge</a></li>
+                <li><a href="#">fuga</a></li>
+                <li><a href="#">piyo</a></li>
+                <li><a href="#">hoge</a></li>
+                <li><a href="#">fuga</a></li>
+                <li><a href="#">piyo</a></li>
+            </ul>
         </header>
-        <div class="units-row">
-            <div class="unit-centered unit-80">
-                main contents
+
+        <div class="units-row" id="contents-area">
+            <div class="unit-push-10 unit-80">
+                <%= yield %>
             </div>
         </div>
+
         <footer>
             (c) 2014-2015 @hnmx4
         </footer>
-        <%= yield %>
     </body>
 </html>

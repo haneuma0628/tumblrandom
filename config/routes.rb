@@ -1,15 +1,29 @@
 Rails.application.routes.draw do
-  get 'main/view'
+  get 'dashbords/reblog'
 
-  get 'main/reload'
+  get 'dashbords/like'
 
-  get 'main/select'
+  get 'dashbords/view_random'
+
+  get 'dashbords/configure'
+
+  get 'dashbords/select_view_blog'
+
+  get 'dashbords/select_active_blog'
+
+  get 'certifications/index'
+
+  get 'certifications/oauth'
+
+  get 'certifications/callback'
+
+  get 'certifications/retry'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  # root 'welcome#index'
+  root 'certifications#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

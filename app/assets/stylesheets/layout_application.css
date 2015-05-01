@@ -1,0 +1,38 @@
+body {
+    background: #36465d;
+    color: #9aa2ad;
+    font-size: 12px;
+}
+
+h1, h2, h3, h4 {
+  color: #9aa2ad;
+}
+
+header.group {
+    background: #36465d;
+    color: #9aa2ad;
+    font-size: 1.8em;
+    padding: 0.4em 1em;
+    height: 2.5em;
+    border-bottom: 1px solid #5e6b7d;
+}
+
+span#icon-selected-blog {
+    display: inline-block;
+    width: 1.5em;
+    height: 1.5em;
+    margin-right: 0.4em;
+    border-radius: 0.2em;
+    background-image: image-url("icon3_emacs.png");
+    Background-size: cover;
+    float: left;
+}
+
+ul#list-blog {
+    font-size: 12px;
+    border-radius: 0.4em;
+}
+
+footer {
+    padding: 1em;
+}
