@@ -45,5 +45,8 @@ group :development, :test do
   gem 'font-awesome-rails'
   gem 'oauth'
   gem 'tumblr_client'
+  gem 'devise'
+  gem 'omniauth'
+  gem 'omniauth-tumblr'
 end
 

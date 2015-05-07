@@ -5,14 +5,8 @@ class CertificationsController < ApplicationController
 
   layout "entrance"
 
-  # Tumblr.configure do |config|
-  #   config.consumer_key = CONSUMER_KEY
-  #   config.consumer_secret = CONSUMER_SECRET
-  #   config.oauth_token = @oauth_token.token
-  #   config.oauth_token_secret = @oauth_token.secret
-  # end
-
   def index
+
   end
 
   def oauth
@@ -28,7 +22,23 @@ class CertificationsController < ApplicationController
     @oauth_verifier = params[:oauth_verifier]
 
     @access_token = $request_token.get_access_token(:oauth_verifier => @oauth_verifier)
-    $hold_access_token = OAuth::AccessToken.new($consumer, @access_token.token, @access_token.secret);
+
+    userinfon = User.new(
+                     :name => '',
+                     :accessToken => @access_token.token,
+                     :accessSecret => @access_token.secret
+                     )
+
+    Tumblr.configure do |config|
+      config.consumer_key = CONSUMER_KEY
+      config.consumer_secret = CONSUMER_SECRET
+      config.oauth_token = @access_token.token
+      config.oauth_token_secret = @access_token.secret
+    end
+
+    # userinfon.save
+
+    redirect_to '/dashbords/view_random'
   end
 
   def retry
