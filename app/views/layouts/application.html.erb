@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Tumblrandom</title>
+        <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+        <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+        <%= csrf_meta_tags %>
+    </head>
+    <body>
+        <header class="group">
+            <nav class="navbar navbar-left">
+                <ul>
+                    <li>tumblrandom </li>
+                </ul>
+            </nav>
+
+            <nav class="navbar navbar-right">
+                <ul>
+                    <li><%= fa_icon 'random' %></li>
+                    <li><%= fa_icon 'user' %></li>
+                    <li><%= fa_icon 'cog' %></li>
+                    <li><span id="icon-selected-blog"></span><i data-tools="dropdown" data-target="#list-blog"  class="fa fa-angle-down" ></i></li>
+                </ul>
+            </nav>
+            <ul id="list-blog" class="dropdown">
+                <li><a href="#">hoge</a></li>
+                <li><a href="#">fuga</a></li>
+                <li><a href="#">piyo</a></li>
+                <li><a href="#">hoge</a></li>
+                <li><a href="#">fuga</a></li>
+                <li><a href="#">piyo</a></li>
+            </ul>
+        </header>
+
+        <div class="units-row" id="contents-area">
+            <div class="unit-push-10 unit-80">
+                <p class="notice"><%= notice %></p>
+                <p class="alert"><%= alert %></p>
+
+                <%= yield %>
+            </div>
+        </div>
+
+        <footer>
+            (c) 2014-2015 @hnmx4
+        </footer>
+    </body>
+</html>
