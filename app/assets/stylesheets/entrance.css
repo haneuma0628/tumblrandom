@@ -13,6 +13,7 @@
 
  *= require_self
  *= require kube.min.css
- *= require layout_entrance.scss
+ *= require common
+ *= require layout_entrance
  *= require font-awesome
  */
