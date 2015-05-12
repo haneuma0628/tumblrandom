@@ -233,7 +233,7 @@ Devise.setup do |config|
   # Add a new OmniAuth provider. Check the wiki for more information on setting
   # up on your models and hooks.
   # config.omniauth :tumblr, ENV["TUMBLRANDOM_CONSUMER_KEY"], ENV["TUMBLRANDOM_CONSUMER_SECRET"], scope: 'user,public_repo'
-  config.omniauth :tumblr, ENV["TUMBLRANDOM_CONSUMER_KEY"], ENV["TUMBLRANDOM_CONSUMER_SECRET"]
+  config.omniauth :tumblr, "zoWkDZWobzLMZpOfb7zsVwqUbk8FwUjcAHV71ukjjInz7lVPXw", "fVMm1m51OdSMx2zbAA3BFjLmqOQHwBp19a4ZTnri1dUHLwf66U"
 
   # ==> Warden configuration
   # If you want to use other strategies, that are not supported by Devise, or

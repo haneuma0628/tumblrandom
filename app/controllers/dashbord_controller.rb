@@ -1,5 +1,5 @@
 class DashbordController < ApplicationController
-  before_action :authenticate_user!, only: :view_random
+  # before_action :authenticate_user!, only: :view_random
 
   def reblog
   end

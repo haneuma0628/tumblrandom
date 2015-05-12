@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users,
-             :controllers => { :omniauth_callbacks => "users/omniauth_callbacks"}
+             :controllers => { :regisration        => "registration",
+                               :omniauth_callbacks => "omniauth_callbacks" }
 
   get 'dashbord/reblog'
   get 'dashbord/like'
