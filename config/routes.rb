@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
-  devise_for :users,
-             :controllers => { :regisration        => "registration",
-                               :omniauth_callbacks => "omniauth_callbacks" }
+  devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
+
+  get 'entrance/index'
 
   get 'dashbord/reblog'
   get 'dashbord/like'
@@ -19,7 +19,8 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'authentication#index'
+  root 'entrance#index'
+  get 'entrance', to: 'entrance#index', as: 'user_root'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

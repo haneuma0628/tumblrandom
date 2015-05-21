@@ -1,7 +1,7 @@
 class AuthenticationController < ApplicationController
   CALLBACK_URL    = "http://www.tumblr.com/oauth/request_token"
-  CONSUMER_KEY    = "zoWkDZWobzLMZpOfb7zsVwqUbk8FwUjcAHV71ukjjInz7lVPXw"
-  CONSUMER_SECRET = "fVMm1m51OdSMx2zbAA3BFjLmqOQHwBp19a4ZTnri1dUHLwf66U"
+  CONSUMER_KEY    = ENV['TUMBLRANDOM_CONSUMER_KEY']
+  CONSUMER_SECRET = ENV['TUMBLRANDOM_CONSUMER_SECRET']
 
   layout "entrance"
 

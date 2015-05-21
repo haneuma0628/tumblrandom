@@ -4,7 +4,7 @@ Devise.setup do |config|
   # The secret key used by Devise. Devise uses this key to generate
   # random tokens. Changing this key will render invalid all existing
   # confirmation, reset password and unlock tokens in the database.
-  # config.secret_key = '484c3cab609cc7e72d1907f13691f0e126bd24b77c385ef4888ae06479c72f1b876cc3197f45514de94ea1da36a56ceffe4d80c524dea0051937d678ef608f84'
+  # config.secret_key = '87799bd624f473168a610a8a6e380c13ccbb53d408e6481222929a01ae7bd73a6748d0d27db5ae8721eb1455590c9445f52a1fe0cb550ad613304ac612732347'
 
   # ==> Mailer Configuration
   # Configure the e-mail address which will be shown in Devise::Mailer,
@@ -97,7 +97,7 @@ Devise.setup do |config|
   config.stretches = Rails.env.test? ? 1 : 10
 
   # Setup a pepper to generate the encrypted password.
-  # config.pepper = '0e7d531b3f98dbe779fd2ee85581a580be48312af99ca8501dbe07d1f5ae8c3db2da04394322f1afd1e7a166cbe35b35567d71c33f8811b1347bbed16c4085b6'
+  # config.pepper = '76533d00813f44fe17411411356fe28eb02c29c0ddc9a0c78d89eecc8cd3b7f84b32b233dd38779c239d1e640f55663b00fcfe3cbaf77c59c86de72aae18d46b'
 
   # ==> Configuration for :confirmable
   # A period that the user is allowed to access the website even without
@@ -232,8 +232,7 @@ Devise.setup do |config|
   # ==> OmniAuth
   # Add a new OmniAuth provider. Check the wiki for more information on setting
   # up on your models and hooks.
-  # config.omniauth :tumblr, ENV["TUMBLRANDOM_CONSUMER_KEY"], ENV["TUMBLRANDOM_CONSUMER_SECRET"], scope: 'user,public_repo'
-  config.omniauth :tumblr, "zoWkDZWobzLMZpOfb7zsVwqUbk8FwUjcAHV71ukjjInz7lVPXw", "fVMm1m51OdSMx2zbAA3BFjLmqOQHwBp19a4ZTnri1dUHLwf66U"
+  config.omniauth :tumblr, ENV['TUMBLRANDOM_CONSUMER_KEY'], ENV['TUMBLRANDOM_CONSUMER_SECRET']
 
   # ==> Warden configuration
   # If you want to use other strategies, that are not supported by Devise, or

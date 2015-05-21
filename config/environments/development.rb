@@ -18,7 +18,7 @@ Rails.application.configure do
   config.action_mailer.raise_delivery_errors = false
 
   # environments ファイルにデフォルトの url オプションを定義
-  config.action_mailer.default_url_options = {:host => 'tumblrandom.c6.vm'}
+  config.action_mailer.default_url_options = { :host => 'tumblrandom.c6.vm' }
 
   # Print deprecation notices to the Rails logger.
   config.active_support.deprecation = :log
