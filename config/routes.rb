@@ -3,17 +3,14 @@ Rails.application.routes.draw do
 
   get 'entrance/index'
 
-  get 'dashbord/reblog'
-  get 'dashbord/like'
-  get 'dashbord/view_random'
-  get 'dashbord/configure'
-  get 'dashbord/select_view_blog'
-  get 'dashbord/select_active_blog'
+  get 'users/dashbord'
 
-  get 'authentication/index'
-  get 'authentication/oauth'
-  get 'authentication/callback'
-  get 'authentication/retry'
+  # post?
+  # get 'users/reblog'
+  # get 'users/like'
+  # get 'users/configure'
+  # get 'users/select_view_blog'
+  # get 'users/select_action_blog'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
