@@ -19,7 +19,9 @@
                     <li><%= fa_icon 'random' %></li>
                     <li><%= fa_icon 'user' %></li>
                     <li><%= fa_icon 'cog' %></li>
-                    <li><%= fa_icon 'sign-out' %></li>
+                    <li><%= link_to destroy_user_session_path, method: :delete do %>
+                        <%= fa_icon 'sign-out' %>
+                    <% end %></li>
                     <!-- <li><span id="icon-selected-blog"></span><i data-tools="dropdown" data-target="#list-blog"  class="fa fa-angle-down" ></i></li>  -->
                 </ul>
             </nav>

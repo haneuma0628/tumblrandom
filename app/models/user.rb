@@ -1,10 +1,11 @@
 class User < ActiveRecord::Base
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
-  # :database_authenticatable, :recoverable, :validatable
+  # :recoverable, :validatable
 
-  # devise :registerable, :rememberable, :trackable, :omniauthable, :omniauth_providers => [:tumblr]
-  devise :omniauthable, :omniauth_providers => [:tumblr]
+  # devise :rememberable, :trackable,
+  devise :database_authenticatable, :registerable, :rememberable, :trackable, :validatable,
+         :omniauthable, :omniauth_providers => [:tumblr]
 
   def User.find_or_create_for_tumblr_oauth(auth)
     user = User.where(provider: auth.provider, uid: auth.uid).first
