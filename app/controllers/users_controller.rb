@@ -3,7 +3,7 @@ require 'tumblr_client'
 class UsersController < ApplicationController
   layout "application"
 
-  before_action :authenticate_tumblr_client, :authenticate_user!
+  before_action :authenticate_user!, :authenticate_tumblr_client
 
   def dashbord
     client = Tumblr::Client.new
