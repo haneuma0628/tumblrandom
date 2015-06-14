@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150514154754) do
+ActiveRecord::Schema.define(version: 20150614114108) do
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  limit: 255, default: "", null: false
@@ -31,7 +31,6 @@ ActiveRecord::Schema.define(version: 20150514154754) do
     t.string   "access_secret",          limit: 255
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "avater_file_name",       limit: 255
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree

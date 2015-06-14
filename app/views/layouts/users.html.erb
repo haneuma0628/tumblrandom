@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Tumblrandom</title>
+        <%= stylesheet_link_tag    'users', media: 'all', 'data-turbolinks-track' => true %>
+        <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+        <%= csrf_meta_tags %>
+    </head>
+    <body>
+        <header class="group">
+            <nav class="navbar navbar-left">
+                <ul>
+                    <li>tumblrandom </li>
+                </ul>
+            </nav>
+
+            <%= render partial: 'users/navbar_right', locals: {client: @client, blogs: @blogs} %>
+
+        </header>
+
+        <div class="units-row" id="contents-area">
+            <div class="unit-push-10 unit-80">
+                <p class="notice"><%= notice %></p>
+                <p class="alert"><%= alert %></p>
+
+                <%= yield %>
+            </div>
+        </div>
+
+        <footer>
+            (c) 2014-2015 @hnmx4
+        </footer>
+    </body>
+</html>

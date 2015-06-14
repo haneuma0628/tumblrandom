@@ -15,6 +15,15 @@ header.group {
     padding: 0.4em 1em;
     height: 2.5em;
     border-bottom: 1px solid #5e6b7d;
+
+    a:link, a:hover, a:visited {
+        color: #9aa2ad;
+    }
+
+    img {
+        width: 1.5em;
+        height: 1.5em;
+    }
 }
 
 span#icon-selected-blog {

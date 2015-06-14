@@ -13,7 +13,6 @@ class User < ActiveRecord::Base
     unless user
       user = User.create!(
         name:             auth.info.nickname,
-        avater_file_name: auth.info.avatar,
         uid:              auth.uid,
         provider:         auth.provider,
         access_token:     auth.credentials.token,

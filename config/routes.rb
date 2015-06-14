@@ -1,10 +1,10 @@
 Rails.application.routes.draw do
   devise_for :users,
              controllers: {omniauth_callbacks: "users/omniauth_callbacks"}
-  
+
   get 'entrance/index'
 
-  get 'users/dashbord'
+  get 'users/dashboard'
 
   # post?
   # get 'users/reblog'

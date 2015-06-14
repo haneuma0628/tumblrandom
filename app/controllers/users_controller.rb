@@ -1,13 +1,12 @@
-require 'tumblr_client'
+require "tumblr_client"
 
 class UsersController < ApplicationController
-  layout "application"
+  layout "users"
 
   before_action :authenticate_user!, :authenticate_tumblr_client
 
-  def dashbord
-    client = Tumblr::Client.new
-    @tum = client.info
+  def dashboard
+    @blogs = @client.info['user']['blogs']
   end
 
   def reblog
@@ -28,11 +27,13 @@ class UsersController < ApplicationController
   private
   def authenticate_tumblr_client
     Tumblr.configure do |config|
-      config.consumer_key = ENV['TUMBLRANDOM_CONSUMER_KEY']
-      config.consumer_secret = ENV['TUMBLRANDOM_CONSUMER_SECRET']
+      config.consumer_key = ENV["TUMBLRANDOM_CONSUMER_KEY"]
+      config.consumer_secret = ENV["TUMBLRANDOM_CONSUMER_SECRET"]
       config.oauth_token = current_user.access_token
       config.oauth_token_secret = current_user.access_secret
     end
+
+    @client = Tumblr::Client.new
   end
 
 end
