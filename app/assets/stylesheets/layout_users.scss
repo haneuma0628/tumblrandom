@@ -5,7 +5,7 @@ body {
 }
 
 h1, h2, h3, h4 {
-  color: #9aa2ad;
+    color: #9aa2ad;
 }
 
 header.group {
@@ -21,6 +21,8 @@ header.group {
     }
 
     img {
+        position: relative;
+        top: -4px;
         width: 1.5em;
         height: 1.5em;
     }
