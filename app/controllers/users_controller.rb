@@ -7,7 +7,7 @@ class UsersController < ApplicationController
 
   def dashboard
     random = Random.new
-    @posts = @client.posts(@selected_blog['name'], limit: 10, offset: 0)['posts'][random.rand(0..9)]
+    @post = @client.posts(@selected_blog['name'], limit: 20, offset: 0)['posts'][random.rand(0..19)]
   end
 
   def reblog

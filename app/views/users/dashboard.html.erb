@@ -1,4 +1,20 @@
-<h1>Users#dashboard</h1>
-<p>Find me in app/views/users/dashbord.html.erb</p>
-<%= @posts %><br>
-<%= current_user.uid %>
+<h1>random post at <%= current_user.uid %></h1>
+<h2><%= @post['type'] %></h2>
+<% case @post['type'] %>
+<% when 'text' %>
+    <%= @post['title'] %><br>
+    <%= @post['body'] %>
+<% when 'photo' %>
+    <%= image_tag @post['photos'][0]['original_size']['url'] %><br>
+    <%= @post['caption'].html_safe %>
+<% when 'quote' %>
+    <%= @post['text'] %><br>
+    <%= @post['source'].html_safe %>
+<% when 'link' %>
+<% when 'answer' %>
+<% when 'video' %>
+<% when 'audio' %>
+<% when 'chat' %>
+<% else %>
+<% end %>
+
