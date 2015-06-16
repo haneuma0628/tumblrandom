@@ -1,3 +1,50 @@
+body {
+    background: #fff;
+    color: #404347;
+    font-size: 12px;
+}
+
+h1, h2, h3, h4 {
+    color: #404347;
+}
+
+h1#logo {
+    font-family: 'tex_gyre_bonumbold';
+    font-size: 1.5em;
+    margin: 0;
+
+    span:nth-child(2) {color: #565656}
+    span:nth-child(3) {color: #da6d52}
+    span:nth-child(4) {color: #f2a243}
+    span:nth-child(5) {color: #66c094}
+    span:nth-child(6) {color: #62a6cf}
+    span:nth-child(7) {color: #af89c7}
+    span:nth-child(8) {color: #808b93}
+}
+
+header.units-row {
+    color: #aeaeae;
+    font-size: 1.8em;
+    padding: 0.8em;
+    margin-bottom: 0.5em;
+    height: 2.5em;
+
+    a:link, a:hover, a:visited {
+        color: #aeaeae;
+    }
+
+    .logo-unit {
+        text-align: center;
+    }
+
+    img {
+        position: relative;
+        top: -4px;
+        width: 1.5em;
+        height: 1.5em;
+    }
+}
+
 a {
     color: #9aa2ad;
     decoration: none;
