@@ -33,6 +33,10 @@ header.units-row {
         color: #aeaeae;
     }
 
+    .logo-unit {
+        text-align: center;
+    }
+
     img {
         position: relative;
         top: -4px;
@@ -65,6 +69,11 @@ span#icon-selected-blog {
 ul#list-blog {
     font-size: 12px;
     border-radius: 0.4em;
+}
+
+#contents-area {
+    width: 540px;
+    margin: 0 auto;
 }
 
 footer {

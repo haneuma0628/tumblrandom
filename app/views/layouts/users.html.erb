@@ -13,7 +13,7 @@
                 <%= render partial: 'users/navbar_left', locals: {client: @client, blogs: @blogs} %>
             </div>
 
-            <div class="unit-30">
+            <div class="unit-30 logo-unit">
                 <h1 id="logo"><span>tumb</span>lrandom</h1>
             </div>
 
@@ -23,13 +23,11 @@
 
         </header>
 
-        <div class="units-row" id="contents-area">
-            <div class="unit-push-10 unit-80">
-                <%= yield %>
+        <div id="contents-area">
+            <%= yield %>
 
-                <p class="notice"><%= notice %></p>
-                <p class="alert"><%= alert %></p>
-            </div>
+            <p class="notice"><%= notice %></p>
+            <p class="alert"><%= alert %></p>
         </div>
 
         <footer>
