@@ -2,28 +2,33 @@
 <html>
     <head>
         <title>Tumblrandom</title>
-        <%= stylesheet_link_tag    'users', media: 'all', 'data-turbolinks-track' => true %>
+        <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+        <%= stylesheet_link_tag    'users',       media: 'all', 'data-turbolinks-track' => true %>
         <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
         <%= csrf_meta_tags %>
     </head>
     <body>
-        <header class="group">
-            <nav class="navbar navbar-left">
-                <ul>
-                    <li>tumblrandom </li>
-                </ul>
-            </nav>
+        <header class="units-row">
+            <div class="unit-35">
+                <%= render partial: 'users/navbar_left', locals: {client: @client, blogs: @blogs} %>
+            </div>
 
-            <%= render partial: 'users/navbar_right', locals: {client: @client, blogs: @blogs} %>
+            <div class="unit-30">
+                <h1 id="logo">tumblrandom</h1>
+            </div>
+
+            <div class="unit-35">
+                <%= render partial: 'users/navbar_right' %>
+            </div>
 
         </header>
 
         <div class="units-row" id="contents-area">
             <div class="unit-push-10 unit-80">
+                <%= yield %>
+
                 <p class="notice"><%= notice %></p>
                 <p class="alert"><%= alert %></p>
-
-                <%= yield %>
             </div>
         </div>
 

@@ -8,6 +8,7 @@ class UsersController < ApplicationController
   def dashboard
     random = Random.new
     @post = @client.posts(@selected_blog['name'], limit: 20, offset: 0)['posts'][random.rand(0..19)]
+    # @post = {'type' => nil}
   end
 
   def reblog

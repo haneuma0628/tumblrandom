@@ -1,5 +1,5 @@
-<h1>random post at <%= current_user.uid %></h1>
-<h2><%= @post['type'] %></h2>
+<h2>random post at <%= current_user.uid %></h2>
+<h3><%= @post['type'] %></h3>
 <% case @post['type'] %>
 <% when 'text' %>
     <%= @post['title'] %><br>
@@ -8,7 +8,7 @@
     <%= image_tag @post['photos'][0]['original_size']['url'] %><br>
     <%= @post['caption'].html_safe %>
 <% when 'quote' %>
-    <%= @post['text'] %><br>
+    <%= @post['text'].html_safe %><br>
     <%= @post['source'].html_safe %>
 <% when 'link' %>
 <% when 'answer' %>
@@ -17,4 +17,3 @@
 <% when 'chat' %>
 <% else %>
 <% end %>
-
