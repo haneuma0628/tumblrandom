@@ -1,19 +1,23 @@
 <h2>random post at <%= current_user.uid %></h2>
-<h3><%= @post['type'] %></h3>
-<% case @post['type'] %>
-<% when 'text' %>
-    <%= @post['title'] %><br>
-    <%= @post['body'] %>
-<% when 'photo' %>
-    <%= image_tag @post['photos'][0]['original_size']['url'] %><br>
-    <%= @post['caption'].html_safe %>
-<% when 'quote' %>
-    <%= @post['text'].html_safe %><br>
-    <%= @post['source'].html_safe %>
-<% when 'link' %>
+<% @posts.each do |post|
+   case post['type'] %>
+<% when 'text'   %>
+    <%= render partial:'box_text_post',   locals: {post: post} %>
+<% when 'photo'  %>
+    <%= render partial:'box_photo_post',  locals: {post: post} %>
+<% when 'quote'  %>
+    <%= render partial:'box_quote_post',  locals: {post: post} %>
+<% when 'link'   %>
+    <%= render partial:'box_link_post',   locals: {post: post} %>
+<% when 'chat'   %>
+    <%= render partial:'box_chat_post',   locals: {post: post} %>
+<% when 'audio'  %>
+    <%= render partial:'box_audio_post',  locals: {post: post} %>
+<% when 'video'  %>
+    <%= render partial:'box_video_post',  locals: {post: post} %>
 <% when 'answer' %>
-<% when 'video' %>
-<% when 'audio' %>
-<% when 'chat' %>
-<% else %>
-<% end %>
+    <%= render partial:'box_answer_post', locals: {post: post} %>
+<% else
+   end
+   end %>
+

@@ -1,0 +1,11 @@
+<div class="post link">
+    <p><%= post['title'] %></p>
+    <p><%= post['author'] %></p>
+    <p><%= post['excerpt'] %></p>
+    <p><%= post['publisher'] %></p>
+    <% @photos = post['photos']
+       @photos.each do |photo| %>
+    <%= image_tag photo['original_size']['url'] %>
+    <% end %>
+    <p><%== post['description'] %></p>
+</div>

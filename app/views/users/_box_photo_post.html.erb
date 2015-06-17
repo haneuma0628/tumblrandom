@@ -1,0 +1,7 @@
+<div class="post photo">
+    <% @photos = post['photos']
+       @photos.each do |photo| %>
+    <%= image_tag photo['original_size']['url'] %>
+    <% end %>
+    <%== post['caption'] %>
+</div>

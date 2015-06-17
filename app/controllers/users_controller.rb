@@ -6,9 +6,13 @@ class UsersController < ApplicationController
   before_action :authenticate_user!, :authenticate_tumblr_client, :get_blog_info
 
   def dashboard
+    fetch_limit = 10
+    num_all_posts = @client.blog_info(@selected_blog['name'])['blog']['posts']
+    all_posts_blocks = (num_all_posts.div(fetch_limit)).to_i
     random = Random.new
-    @post = @client.posts(@selected_blog['name'], limit: 20, offset: 0)['posts'][random.rand(0..19)]
-    # @post = {'type' => nil}
+    fetch_offset = random.rand(0..all_posts_blocks)
+
+    @posts = @client.posts(@selected_blog['name'], limit: fetch_limit, offset: fetch_offset)['posts']
   end
 
   def reblog

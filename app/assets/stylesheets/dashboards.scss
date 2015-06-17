@@ -2,6 +2,42 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+#contents-area {
+    .post {
+        box-sizing: border-box;
+        border-radius: 8px;
+        margin: 1em 0;
+        padding: 1em;
+        font-size: 14px;
+        color: #49576B;
+    }
+
+    .text {
+        border: 2px solid #565656;
+    }
+    .photo {
+        border: 2px solid #DA6D52;
+    }
+    .quote {
+        border: 2px solid #F2A243;
+    }
+    .link {
+        border: 2px solid #66c094;
+    }
+    .chat {
+        border: 2px solid #62a6cf;
+    }
+    .audio {
+        border: 2px solid #af89c7;
+    }
+    .video {
+        border: 2px solid #808B93;
+    }
+    .answer {
+        border: 2px solid #767FE9;
+    }
+}
+
 #contents-area img {
     width: 540px;
 }
