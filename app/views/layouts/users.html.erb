@@ -8,6 +8,7 @@
         <%= csrf_meta_tags %>
     </head>
     <body>
+        <span name="top"></span>
         <header class="units-row">
             <div class="unit-35">
                 <%= render partial: 'users/navbar_left', locals: {client: @client, blogs: @blogs} %>
@@ -20,7 +21,6 @@
             <div class="unit-35">
                 <%= render partial: 'users/navbar_right' %>
             </div>
-
         </header>
 
         <div id="contents-area">
@@ -30,8 +30,13 @@
             <p class="alert"><%= alert %></p>
         </div>
 
-        <footer>
-            (c) 2014-2015 @hnmx4
+        <footer class="units-row">
+            <div class="unit-30">
+                (c) 2014-2015 @hnmx4
+            </div>
+            <div class="unit-70 text-right bottom-bar">
+                <a href="#top"><%= fa_icon 'arrow-up' %></a>
+            </div>
         </footer>
     </body>
 </html>
