@@ -13,6 +13,8 @@ class UsersController < ApplicationController
     fetch_offset = random.rand(0..all_posts_blocks)
 
     @posts = @client.posts(@selected_blog['name'], limit: fetch_limit, offset: fetch_offset)['posts']
+
+    @page = fetch_offset
   end
 
   def reblog

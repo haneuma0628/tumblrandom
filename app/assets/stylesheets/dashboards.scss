@@ -3,6 +3,10 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 #contents-area {
+    a:link, a:hover, a:visited {
+        color: #66c094;
+    }
+
     .post {
         box-sizing: border-box;
         border-radius: 8px;
@@ -20,6 +24,18 @@
     }
     .quote {
         border: 2px solid #F2A243;
+
+        div.quote-content {
+            margin-bottom: 1.2em;
+            line-height: 1.5;
+            p {
+                margin-bottom: 0.5em;
+            }
+        }
+        div.source {
+            margin-bottom: 0;
+            font-size: 0.8em;
+        }
     }
     .link {
         border: 2px solid #66c094;
@@ -40,4 +56,10 @@
 
 #contents-area img {
     width: 540px;
+}
+
+blockquote {
+    font-size: 1em;
+    margin-left: 0;
+    padding-left: 0.5em;
 }

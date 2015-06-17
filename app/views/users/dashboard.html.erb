@@ -1,4 +1,5 @@
 <h2>random post at <%= current_user.uid %></h2>
+p. <%= @page %>
 <% @posts.each do |post|
    case post['type'] %>
 <% when 'text'   %>
