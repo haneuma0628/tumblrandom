@@ -1,11 +1,18 @@
 <div class="post link">
-    <p><%= post['title'] %></p>
-    <p><%= post['author'] %></p>
-    <p><%= post['excerpt'] %></p>
-    <p><%= post['publisher'] %></p>
-    <% @photos = post['photos']
-       @photos.each do |photo| %>
-    <%= image_tag photo['original_size']['url'] %>
-    <% end %>
-    <p><%== post['description'] %></p>
+    <div class="post-icon">
+        <%= fa_icon 'link' %>
+    </div>
+    <div class="post-content">
+        <% @title = post['title'] %>
+        <h3><%= link_to_if(@title.present?, post['title'], post['url']) %></h3>
+        <p><%= post['author'] %></p>
+        <p><%= post['excerpt'] %></p>
+        <% @photos = post['photos'] %>
+        <% if @photos.present? %>
+            <% @photos.each do |photo| %>
+                <%= image_tag photo['original_size']['url'] %>
+            <% end %>
+        <% end  %>
+        <div class="detailed-information"><%== post['description'] %></div>
+    </div>
 </div>

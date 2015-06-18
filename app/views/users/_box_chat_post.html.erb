@@ -1,5 +1,16 @@
 <div class="post chat">
-    <p><%= post['title'] %></p>
-    <p><%== post['body'] %></p>
-    <p><%== post['dialog'] %></p>
+    <div class="post-icon">
+        <%= fa_icon 'weixin' %>
+    </div>
+    <div class="post-content">
+        <h3><%= post['title'] %></h3>
+        <% @logs = post['dialogue'] %>
+        <% if @logs.present? %>
+            <% @logs.each do |log| %>
+                <p>
+                    <b><%= log['name'] %></b> : <%= log['phrase'] %>
+                </p>
+            <% end %>
+        <% end %>
+    </div>
 </div>

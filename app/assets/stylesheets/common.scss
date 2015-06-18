@@ -23,13 +23,14 @@ h1#logo {
 }
 
 header.units-row {
-    color: #aeaeae;
+    color: #AEAEAE;
     font-size: 1.8em;
     padding: 0.8em;
     margin-bottom: 0;
 
     a:link, a:hover, a:visited {
-        color: #aeaeae;
+        color: #AEAEAE;
+        decoration: none;
     }
 
     .logo-unit {
@@ -42,9 +43,4 @@ header.units-row {
         width: 1.5em;
         height: 1.5em;
     }
-}
-
-a {
-    color: #9aa2ad;
-    decoration: none;
 }

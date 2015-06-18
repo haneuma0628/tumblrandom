@@ -1,6 +1,9 @@
 <div class="post answer">
-    <p><%= post['asking_name'] %></p>
-    <p><%= post['asking_url'] %></p>
-    <p><%= post['question'] %></p>
-    <p><%== post['answer'] %></p>
+    <div class="post-icon">
+        <%= fa_icon 'question' %>
+    </div>
+    <div class="post-content">
+        <p><b><%= post['asking_name'] %> asked : <%= post['question'] %></b></p>
+        <%== post['answer'] %>
+    </div>
 </div>

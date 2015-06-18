@@ -5,57 +5,108 @@
 #contents-area {
     a:link, a:hover, a:visited {
         color: #66c094;
+        text-decoration: none;
     }
 
     .post {
-        box-sizing: border-box;
+        box-sizing: content-box;
+        width: 500px;
         border-radius: 8px;
-        margin: 1em 0;
+        margin: 1em auto;
         padding: 1em;
         font-size: 14px;
         color: #49576B;
+
+        h3 {
+            font-size: 1.2em;
+            font-weight: normal;
+            margin-bottom: 1.2em;
+        }
+
+        .detailed-information {
+            font-size: 0.9em;
+            margin-bottom: 0;
+        }
+
+        .post-icon {
+            text-align: center;
+            font-size: 1.5em;
+        }
+        .post-content {
+            margin: 1.2em auto;
+        }
     }
 
     .text {
         border: 2px solid #565656;
+
+        .fa {color: #565656;}
     }
     .photo {
         border: 2px solid #DA6D52;
+
+        .fa {color: #DA6D52;}
+
+        img {
+            box-sizing: border-box;
+            width: 540px;
+            margin: 0 auto;
+            margin-bottom: 1em;
+        }
     }
     .quote {
         border: 2px solid #F2A243;
 
-        div.quote-content {
-            margin-bottom: 1.2em;
+        .fa {color: #F2A243;}
+
+        .post-content {
             line-height: 1.5;
             p {
                 margin-bottom: 0.5em;
             }
         }
-        div.source {
-            margin-bottom: 0;
-            font-size: 0.8em;
-        }
     }
     .link {
-        border: 2px solid #66c094;
+        border: 2px solid #66C094;
+
+        .fa {color: #66C094;}
     }
     .chat {
-        border: 2px solid #62a6cf;
+        border: 2px solid #62A6CF;
+
+        .fa {color: #62A6CF;}
+
+        .post-content p {
+            margin-bottom: 0.5em;
+        }
     }
     .audio {
-        border: 2px solid #af89c7;
+        border: 2px solid #AF89C7;
+
+        .fa {color: #AF89C7;}
+
+        .post-content > * {
+            margin: 0 auto;
+        }
     }
     .video {
         border: 2px solid #808B93;
+
+        .fa {color: #808B93;}
+
+        .post-content > * {
+            margin: 0 auto;
+        }
     }
     .answer {
         border: 2px solid #767FE9;
-    }
-}
 
-#contents-area img {
-    width: 540px;
+        .fa {color: #767FE9;}
+
+        .post-content p {
+            margin-bottom: 0.5em;
+        }
+    }
 }
 
 blockquote {

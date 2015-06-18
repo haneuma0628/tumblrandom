@@ -1,7 +1,14 @@
 <div class="post photo">
-    <% @photos = post['photos']
-       @photos.each do |photo| %>
-    <%= image_tag photo['original_size']['url'] %>
+    <div class="post-icon">
+        <%= fa_icon 'camera' %>
+    </div>
+    <div class="post-content">
+        <% @photos = post['photos']
+        @photos.each do |photo| %>
+        <%= image_tag photo['original_size']['url'] %>
     <% end %>
-    <%== post['caption'] %>
+    </div>
+    <div class="detailed-information">
+        <%== post['caption'] %>
+    </div>
 </div>

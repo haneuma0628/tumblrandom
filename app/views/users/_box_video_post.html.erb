@@ -1,4 +1,11 @@
 <div class="post video">
-    <%== post['player'][0]['embed_code'] %>
-    <%== post['caption'] %>
+    <div class="post-icon">
+        <%= fa_icon 'video-camera' %>
+    </div>
+    <div class="post-content">
+        <%== post['player'][2]['embed_code'] %>
+    </div>
+    <div class="detailed-information">
+        <%== post['caption'] %>
+    </div>
 </div>

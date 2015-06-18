@@ -1,4 +1,9 @@
 <div class="post text">
-    <p><%= post['title'] %></p>
-    <p><%== post['body'] %></p>
+    <div class="post-icon">
+        <%= fa_icon 'font' %>
+    </div>
+    <div class="post-content">
+        <h3><%= post['title'] %></h3>
+        <%== post['body'] %>
+    </div>
 </div>
