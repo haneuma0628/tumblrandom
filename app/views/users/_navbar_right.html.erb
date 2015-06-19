@@ -1,10 +1,14 @@
 <nav class="navbar navbar-right">
     <ul>
         <li><%= fa_icon 'random' %></li>
-        <li><%= fa_icon 'cog' %></li>
+        <li><i class="fa fa-cog" data-tools="dropdown" data-target="#cog-dropdown"></i>
         <li><%= link_to destroy_user_session_path, method: :delete do %>
             <%= fa_icon 'sign-out' %>
         <% end %></li>
     </ul>
 </nav>
+<ul id="cog-dropdown" class="dropdown">
+    <li>hoge</li>
+    <li>fuga</li>
+</ul>
 

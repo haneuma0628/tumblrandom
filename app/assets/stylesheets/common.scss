@@ -25,6 +25,8 @@ h1#logo {
 header.units-row {
     color: #AEAEAE;
     font-size: 1.8em;
+    box-sizing: content-box;
+    height: 45px;
     padding: 0.8em;
     margin-bottom: 0;
 
@@ -42,5 +44,21 @@ header.units-row {
         top: -4px;
         width: 1.5em;
         height: 1.5em;
+    }
+
+    nav.navbar {
+        height: 45px;
+        margin: 0;
+
+        ul, li, img {
+            height: 45px;
+        }
+
+        img {
+            width: auto;
+            top: 0px;
+            left: 0px;
+            border-radius: 3px;
+        }
     }
 }
