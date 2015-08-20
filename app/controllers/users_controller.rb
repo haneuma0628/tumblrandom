@@ -3,10 +3,10 @@ require 'tumblr_client'
 class UsersController < ApplicationController
   layout 'users'
 
-  before_action :authenticate_user!, :authenticate_tumblr_client, :get_blog_info
+  before_action :authenticate_user!, :authenticate_tumblr_client, :get_app_info
 
   def dashboard
-    fetch_limit = 10
+    fetch_limit = @cogs['fetch_limit']
     num_all_posts = @client.blog_info(@selected_blog['name'])['blog']['posts']
     all_posts_blocks = (num_all_posts.div(fetch_limit)).to_i
     random = Random.new
@@ -17,13 +17,16 @@ class UsersController < ApplicationController
     @page = fetch_offset
   end
 
+  def reload
+  end
+
   def reblog
   end
 
   def like
   end
 
-  def configure
+  def settings
   end
 
   def select_view_blog
@@ -44,9 +47,12 @@ class UsersController < ApplicationController
     @client = Tumblr::Client.new
   end
 
-  def get_blog_info
+  def get_app_info
     @blogs = @client.info['user']['blogs']
     @selected_blog = @blogs[0]
+
+    @cogs = {}
+    @cogs['fetch_limit'] = 10
   end
 
 end

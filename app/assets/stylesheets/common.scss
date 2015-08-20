@@ -27,6 +27,7 @@ header.units-row {
     font-size: 1.8em;
     box-sizing: content-box;
     height: 45px;
+    top: 0px;
     padding: 0.8em;
     margin-bottom: 0;
 
@@ -59,6 +60,12 @@ header.units-row {
             top: 0px;
             left: 0px;
             border-radius: 3px;
+        }
+
+        span.mini-icon {
+            display: inline;
+            font-size: 15px;
+            margin-left: 4px;
         }
     }
 }

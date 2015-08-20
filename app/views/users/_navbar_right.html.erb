@@ -1,14 +1,20 @@
 <nav class="navbar navbar-right">
     <ul>
-        <li><%= fa_icon 'random' %></li>
-        <li><i class="fa fa-cog" data-tools="dropdown" data-target="#cog-dropdown"></i>
-        <li><%= link_to destroy_user_session_path, method: :delete do %>
+        <li>
+            <%= link_to :controller => "users", :action => "dashboard" do %>
+            <%= fa_icon 'random' %>
+            <% end %>
+        </li>
+        <li><i class="fa fa-cog" data-tools="dropdown" data-target="#cog-dropdown"></i><span class="mini-icon"><i class="fa fa-angle-down" data-tools="dropdown" data-target="#cog-dropdown"></i></span></li>
+        <li>
+            <%= link_to destroy_user_session_path, method: :delete do %>
             <%= fa_icon 'sign-out' %>
-        <% end %></li>
+            <% end %>
+        </li>
     </ul>
 </nav>
 <ul id="cog-dropdown" class="dropdown">
-    <li>hoge</li>
-    <li>fuga</li>
+    <li><span>limit: <%= @cogs['fetch_limit'] %></span></li>
+    <li><%= link_to "edit settings", 'settings' %></li>
 </ul>
 

@@ -1,6 +1,8 @@
 <div class="post photo">
     <div class="post-icon">
-        <%= fa_icon 'camera' %>
+        <%= link_to post['post_url'] do %>
+            <%= fa_icon 'camera' %>
+        <% end %>
     </div>
     <div class="post-content">
         <% @photos = post['photos']

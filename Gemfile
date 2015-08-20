@@ -50,6 +50,8 @@ group :development, :test do
   gem 'omniauth'
   gem 'omniauth-tumblr'
 
+  gem 'jquery-turbolinks'
+
   gem 'dotenv-rails', :groups => [:development, :test]
 end
 

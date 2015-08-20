@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   get 'entrance/index'
 
   get 'users/dashboard'
+  get 'users/settings'
 
   # post?
   # get 'users/reblog'

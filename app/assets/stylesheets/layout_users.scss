@@ -2,20 +2,14 @@
     margin-left: 1em;
 }
 
-span#icon-selected-blog {
-    display: inline-block;
-    width: 1.5em;
-    height: 1.5em;
-    margin-right: 0.4em;
-    border-radius: 0.2em;
-    background-image: image-url("icon3_emacs.png");
-    Background-size: cover;
-    float: left;
-}
+ul#cog-dropdown.dropdown {
+    color: #404347;
+    font-size: 14px;
 
-ul#list-blog {
-    font-size: 12px;
-    border-radius: 0.4em;
+    span, a {
+        display: block;
+        padding: 0.5em 1em;
+    }
 }
 
 #contents-area {
@@ -29,6 +23,7 @@ footer {
     .bottom-bar {
         font-size: 1.8em;
         padding-right: 1em;
+        text-align: center;
 
         a:link, a:hover, a:visited {
             color: #aeaeae;
