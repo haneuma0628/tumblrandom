@@ -43,6 +43,8 @@ group :development, :test do
   gem 'spring'
 
   gem 'font-awesome-rails'
+  gem 'spinjs-rails'
+
   gem 'oauth'
   gem 'tumblr_client'  
 

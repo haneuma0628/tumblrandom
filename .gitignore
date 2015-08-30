@@ -20,6 +20,8 @@
 \#*
 *~
 
+Gemfile.lock
+
 /public/assets
 
 vendor/
