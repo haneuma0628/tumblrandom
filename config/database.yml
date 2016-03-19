@@ -1,7 +1,7 @@
 # database with mysql
 default: &default
   adapter   : mysql2
-  host      : localhost
+  host      : 133.242.132.50
   username  : <%= ENV['DB_DEVELOPMENT_USERNAME'] %>
   password  : <%= ENV['DB_DEVELOPMENT_PASSWORD']%>
   encoding  : utf8
@@ -20,5 +20,5 @@ test:
 
 production:
   <<: *default
-  database: tumblrandom_production
+  database: tumblrandom
 

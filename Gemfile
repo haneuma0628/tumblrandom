@@ -1,10 +1,10 @@
 source 'https://rubygems.org'
 
-
+gem 'rake', '>= 10.0.0'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.0'
 # Use sqlite3 as the database for Active Record
-gem 'mysql2'
+gem 'mysql2', '~> 0.3.20'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
@@ -12,7 +12,7 @@ gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.1.0'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-# gem 'therubyracer', platforms: :ruby
+gem 'therubyracer', platforms: :ruby
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
@@ -46,15 +46,16 @@ group :development, :test do
   gem 'spinjs-rails'
 
   gem 'oauth'
-  gem 'tumblr_client'  
+  gem 'tumblr_client'
 
-  gem 'devise'
+  gem 'devise', '~> 3.4.1'
   gem 'omniauth'
   gem 'omniauth-tumblr'
 
   gem 'jquery-turbolinks'
 
-  gem 'dotenv-rails', :groups => [:development, :test]
+  # gem 'dotenv-rails', :groups => [:development, :test]
+  gem 'dotenv-rails'
 end
 
 

@@ -4,7 +4,7 @@ Devise.setup do |config|
   # The secret key used by Devise. Devise uses this key to generate
   # random tokens. Changing this key will render invalid all existing
   # confirmation, reset password and unlock tokens in the database.
-  # config.secret_key = '87799bd624f473168a610a8a6e380c13ccbb53d408e6481222929a01ae7bd73a6748d0d27db5ae8721eb1455590c9445f52a1fe0cb550ad613304ac612732347'
+  config.secret_key = ENV['DEVISE_SECRET_KEY']
 
   # ==> Mailer Configuration
   # Configure the e-mail address which will be shown in Devise::Mailer,
@@ -232,7 +232,8 @@ Devise.setup do |config|
   # ==> OmniAuth
   # Add a new OmniAuth provider. Check the wiki for more information on setting
   # up on your models and hooks.
-  config.omniauth :tumblr, ENV['TUMBLRANDOM_CONSUMER_KEY'], ENV['TUMBLRANDOM_CONSUMER_SECRET']
+  require 'omniauth-tumblr'
+  config.omniauth :tumblr, ENV['TUMBLRANDOM_CONSUMER_KEY'], ENV['TUMBLRANDOM_CONSUMER_SECRET'], :strategy_class => OmniAuth::Strategies::Tumblr
 
   # ==> Warden configuration
   # If you want to use other strategies, that are not supported by Devise, or

@@ -1,4 +1,5 @@
 require 'tumblr_client'
+require 'omniauth-tumblr'
 
 class UsersController < ApplicationController
   layout 'users'
@@ -17,23 +18,20 @@ class UsersController < ApplicationController
     @page = fetch_offset
   end
 
-  def reload
-  end
+  # def reload
+  # end
 
-  def reblog
-  end
+  # def like
+  # end
 
-  def like
-  end
+  # def settings
+  # end
 
-  def settings
-  end
+  # def select_view_blog
+  # end
 
-  def select_view_blog
-  end
-
-  def select_action_blog
-  end
+  # def select_action_blog
+  # end
 
   private
   def authenticate_tumblr_client
