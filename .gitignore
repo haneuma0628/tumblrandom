@@ -22,7 +22,8 @@
 
 Gemfile.lock
 
-/public/assets
-
 vendor/
 .env
+
+# framework, etc
+app/assets/javascripts/kube.js
