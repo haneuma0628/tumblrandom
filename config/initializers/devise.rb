@@ -97,7 +97,7 @@ Devise.setup do |config|
   config.stretches = Rails.env.test? ? 1 : 10
 
   # Setup a pepper to generate the encrypted password.
-  # config.pepper = '76533d00813f44fe17411411356fe28eb02c29c0ddc9a0c78d89eecc8cd3b7f84b32b233dd38779c239d1e640f55663b00fcfe3cbaf77c59c86de72aae18d46b'
+  # config.pepper = '461d71d134123e95db8fd7ee08288d06db10d152cd4a29ddaef99f93fe8f1610447e6478d56d10ea83db43f4a57702c9709e33c716c716e5f4615767c1ebcce6'
 
   # ==> Configuration for :confirmable
   # A period that the user is allowed to access the website even without
@@ -232,6 +232,7 @@ Devise.setup do |config|
   # ==> OmniAuth
   # Add a new OmniAuth provider. Check the wiki for more information on setting
   # up on your models and hooks.
+  # config.omniauth :github, 'APP_ID', 'APP_SECRET', scope: 'user,public_repo'
   require 'omniauth-tumblr'
   config.omniauth :tumblr, ENV['TUMBLRANDOM_CONSUMER_KEY'], ENV['TUMBLRANDOM_CONSUMER_SECRET'], :strategy_class => OmniAuth::Strategies::Tumblr
 

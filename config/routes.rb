@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  devise_for :users,
+  devise_for :users, class_name: 'FromUser',
              controllers: { omniauth_callbacks: 'omniauth_callbacks' }
 
   get 'entrance/index'
