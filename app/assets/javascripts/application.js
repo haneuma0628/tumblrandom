@@ -13,8 +13,6 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
-//= require spin
-//= require jquery.spin
 //= require kube.js
 //= require_tree .
 $('[data-tools="dropdown"]').dropdown();
