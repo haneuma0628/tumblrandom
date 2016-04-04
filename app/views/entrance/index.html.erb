@@ -1,4 +1,7 @@
 <h1>Entrance#index</h1>
-<p>Find me in app/views/entrance/index.html.erb</p>
 
-<%= link_to "Sign in with Tumblr", user_omniauth_authorize_path(:tumblr) %>
+<p>notice: <%= notice %></p>
+<p>alert: <%= alert %></p>
+
+<p><%= link_to "Sign in with Tumblr", user_omniauth_authorize_path(:tumblr) %></p>
+<p><%= link_to "Signout", destroy_user_session_path, method: :delete %></p>
