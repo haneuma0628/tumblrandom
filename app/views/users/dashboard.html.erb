@@ -1,4 +1,4 @@
-<h2>random post at <%= current_user.uid %></h2>
+<h2>random post at <%= current_user.user_id %></h2>
 page: <%= @page %>
 <% if @posts.present? %>
     <% @posts.each do |post|
@@ -23,4 +23,3 @@ page: <%= @page %>
     <% end %>
 <% end %>
 <% end %>
-

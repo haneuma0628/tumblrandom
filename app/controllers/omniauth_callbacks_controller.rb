@@ -1,15 +1,11 @@
 class OmniauthCallbacksController < Devise::OmniauthCallbacksController
   layout "entrance"
-  require 'logger'
 
   def tumblr
-    log = Logger.new('/var/www/html/hassakutea/app/tumblrandom/log/debug.log')
     @identity = Identity.find_for_oauth request.env['omniauth.auth']
     @user = @identity.user || current_user
     # if @user.nil?
-    log.debug(@user)
     unless @user
-      log.debug('user not found')
       @user = User.create!( user_id: @identity.user_id, email: @identity.email || "" )
       @identity.update_attribute( :user_id, @user.id )
     end

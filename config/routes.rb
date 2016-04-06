@@ -3,6 +3,7 @@ Rails.application.routes.draw do
              controllers: { omniauth_callbacks: 'omniauth_callbacks' }
 
   get 'entrance/index'
+  get 'entrance/tmp'
 
   get 'users/dashboard'
   get 'users/settings'
