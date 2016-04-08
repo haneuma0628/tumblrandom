@@ -4,9 +4,8 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
   def tumblr
     @identity = Identity.find_for_oauth request.env['omniauth.auth']
     @user = @identity.user || current_user
-    # if @user.nil?
-    unless @user
-      @user = User.create!( user_id: @identity.user_id, email: @identity.email || "" )
+    if @user.nil?
+      @user = User.create!( email: @identity.email || "" )
       @identity.update_attribute( :user_id, @user.id )
     end
 
@@ -15,7 +14,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     end
 
     if @user.persisted?
-      @identity.update_attribute( :user_id, @user_id )
+      @identity.update_attribute( :user_id, @user.id )
       @user = FromUser.find @user.id
       sign_in_and_redirect @user, :event => :authentication
       set_flash_message( :notice, :success, kind: 'Tumblr' ) if is_navigational_format?

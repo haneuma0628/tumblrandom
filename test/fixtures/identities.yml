@@ -7,8 +7,6 @@ one:
   uid: MyString
   name: MyString
   email: MyString
-  nickname: MyString
-  image: MyString
 
 two:
   user_id: 
@@ -17,5 +15,3 @@ two:
   uid: MyString
   name: MyString
   email: MyString
-  nickname: MyString
-  image: MyString

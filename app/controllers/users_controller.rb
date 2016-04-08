@@ -5,7 +5,7 @@ class UsersController < ApplicationController
   before_action :authenticate_user!
 
   def dashboard
-    User.authenticate_tumblr_client
+    @client = User.authenticate_tumblr_client
 
     @blogs = @client.info['user']['blogs']
     @selected_blog = @blogs[0]

@@ -11,7 +11,6 @@ class Identity < ActiveRecord::Base
     identity.access_secret = auth.credentials.secret
     identity.name          = auth.info.name
     identity.email         = auth.info.email
-    identity.nickname      = auth.info.nickname
 
     identity.save
     identity

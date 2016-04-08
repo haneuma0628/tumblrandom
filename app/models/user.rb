@@ -19,7 +19,9 @@ class User < ActiveRecord::Base
       config.consumer_secret = ENV['TUMBLRANDOM_CONSUMER_SECRET']
       config.oauth_token = self.tumblr.access_token
       config.oauth_token_secret = self.tumblr.access_secret
+
+      @client = Tumblr::Client.new
+      return @client
     end
-    @client = Tumblr::Client.new
   end
 end
